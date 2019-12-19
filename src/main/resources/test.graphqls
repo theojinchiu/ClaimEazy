@@ -1,0 +1,14 @@
+type Account {
+    id: ID!
+    password: String
+    name: String
+}
+
+type Query {
+    version: String!
+    getAccountById(id: ID!) : Account
+}
+
+type Mutation {
+    createAccount(name: String!, password: String!) : Account!
+}
